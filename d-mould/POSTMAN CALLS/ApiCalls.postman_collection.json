@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "58472a67-29b3-413b-aa78-50b4a3cd17b7",
+		"name": "ApiCalls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21330934"
+	},
+	"item": [
+		{
+			"name": "http://localhost:1026/v2/entities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "opcua_tmstation",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/demo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1026/v2/entities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"entities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://172.28.112.1:4001/iot/devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "opcua_tmstation",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/demo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://172.28.112.1:4001/iot/devices",
+					"protocol": "http",
+					"host": [
+						"172",
+						"28",
+						"112",
+						"1"
+					],
+					"port": "4001",
+					"path": [
+						"iot",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://172.28.112.1:1026/v2/subscriptions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "opcua_tmstation",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/demo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"description\": \"Test subscription\",\r\n        \"subject\": {\r\n            \"entities\": [\r\n            {\r\n                \"idPattern\": \".*\",\r\n                \"type\": \"TM_Station\"\r\n            }\r\n            ],\r\n            \"condition\": {\r\n                \"attrs\": [\r\n                ]\r\n            }\r\n        },\r\n        \"notification\": {\r\n            \"http\": {\r\n                \"url\": \"http://172.28.112.1:8668/v2/notify\"\r\n            },\r\n            \"attrs\": [\r\n            ],\r\n            \"metadata\": [\"dateCreated\", \"dateModified\"]\r\n        },\r\n        \"throttling\": 5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.28.112.1:1026/v2/subscriptions",
+					"protocol": "http",
+					"host": [
+						"172",
+						"28",
+						"112",
+						"1"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://172.28.112.1:1026/v2/subscriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "opcua_tmstation",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/demo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"description\": \"Test subscription\",\r\n        \"subject\": {\r\n            \"entities\": [\r\n            {\r\n                \"idPattern\": \".*\",\r\n                \"type\": \"2:TM_Station\"\r\n            }\r\n            ],\r\n            \"condition\": {\r\n                \"attrs\": [\r\n                ]\r\n            }\r\n        },\r\n        \"notification\": {\r\n            \"http\": {\r\n                \"url\": \"http://quantumleap:8668/v2/notify\"\r\n            },\r\n            \"attrs\": [\r\n            ],\r\n            \"metadata\": [\"dateCreated\", \"dateModified\"]\r\n        },\r\n        \"throttling\": 5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.28.112.1:1026/v2/subscriptions",
+					"protocol": "http",
+					"host": [
+						"172",
+						"28",
+						"112",
+						"1"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1026/v2/entities/age01_TM_Station/attrs",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "opcua_tmstation",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/demo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"GoodPartsCounter\": {\r\n    \"value\": 752,\r\n    \"type\": \"Integer\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1026/v2/entities/age01_TM_Station/attrs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"entities",
+						"age01_TM_Station",
+						"attrs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
