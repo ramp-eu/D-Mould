@@ -1,0 +1,67 @@
+{
+  "logLevel" : "INFO",
+  "contextBroker" : {
+    "host" : "orion",
+    "port" : 1026
+  },
+  "server" : {
+    "port" : 4001,
+    "baseRoot" : "/"
+  },
+  "deviceRegistry" : {
+    "type" : "memory"
+  },
+  "mongodb" : {
+    "host" : "iotmongo",
+    "port" : "27017",
+    "db" : "iotagent",
+    "retries" : 5,
+    "retryTime" : 5
+  },
+  "types" : {
+    "2:TM_Station" : {
+      "service" : "opcua_tmstation",
+      "subservice" : "/demo",
+      "active" : [ {
+        "name" : "2:GoodPartsCounter",
+        "type" : "Number"
+      }, {
+        "name" : "2:TotalPartsCounter",
+        "type" : "Number"
+      }],
+      "lazy" : [ ],
+      "commands" : [ ]
+    }
+  },
+  "browseServerOptions" : null,
+  "service" : "opcua_tmstation",
+  "subservice" : "/demo",
+  "providerUrl" : "http://iotage:4001",
+  "pollingExpiration" : "200000",
+  "pollingDaemonFrequency" : "20000",
+  "deviceRegistrationDuration" : "P1M",
+  "defaultType" : null,
+  "contexts" : [ {
+    "id" : "age01_2:TM_Station",
+    "type" : "2:TM_Station",
+    "service" : "opcua_tmstation",
+    "subservice" : "/demo",
+    "polling" : true,
+    "mappings" : [ {
+      "ocb_id" : "2:GoodPartsCounter",
+      "opcua_id" : "ns=2;s=GoodPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:TotalPartsCounter",
+      "opcua_id" : "ns=2;s=TotalPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }
+	]
+  } 
+  ],
+  "contextSubscriptions" : [ 
+
+  ]
+}

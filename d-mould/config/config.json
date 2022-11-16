@@ -1,0 +1,163 @@
+{
+  "logLevel" : "INFO",
+  "contextBroker" : {
+    "host" : "orion",
+    "port" : 1026
+  },
+  "server" : {
+    "port" : 4001,
+    "baseRoot" : "/"
+  },
+  "deviceRegistry" : {
+    "type" : "memory"
+  },
+  "mongodb" : {
+    "host" : "iotmongo",
+    "port" : "27017",
+    "db" : "iotagent",
+    "retries" : 5,
+    "retryTime" : 5
+  },
+  "types" : {
+    "TM_Station" : {
+      "service" : "opcua_tmstation",
+      "subservice" : "/demo",
+      "active" : [ {
+        "name" : "GoodPartsCounter",
+        "type" : "Number"
+      }, {
+        "name" : "TotalPartsCounter",
+        "type" : "Number"
+      }, {
+        "name" : "TargetQuantity",
+        "type" : "Number"
+      }, {
+        "name" : "PackagingUnitQuantity",
+        "type" : "Number"
+      }, {
+        "name" : "CycleTime",
+        "type" : "Number"
+      }, {
+        "name" : "TMrobot_Operation",
+        "type" : "Number"
+      }, {
+        "name" : "TMrobot_Gripper",
+        "type" : "Number"
+      }, {
+        "name" : "TMrobot_CycleTime",
+        "type" : "Number"
+      }, {
+        "name" : "Conveyor_Sensor1",
+        "type" : "Number"
+      }, {
+        "name" : "Conveyor_Sensor2",
+        "type" : "Number"
+      }, {
+        "name" : "Conveyor_CycleTime",
+        "type" : "Number"
+      }, {
+        "name" : "OTTO_Battery",
+        "type" : "Number"
+      }, {
+        "name" : "OTTO_Serial",
+        "type" : "Text"
+      }, {
+        "name" : "OTTO_Name",
+        "type" : "Text"
+      }],
+      "lazy" : [ ],
+      "commands" : [ ]
+    }
+  },
+  "browseServerOptions" : null,
+  "service" : "opcua_tmstation",
+  "subservice" : "/demo",
+  "providerUrl" : "http://iotage:4001",
+  "pollingExpiration" : "200000",
+  "pollingDaemonFrequency" : "20000",
+  "deviceRegistrationDuration" : "P1M",
+  "defaultType" : null,
+  "contexts" : [ {
+    "id" : "age01_TM_Station",
+    "type" : "TM_Station",
+    "service" : "opcua_tmstation",
+    "subservice" : "/demo",
+    "polling" : false,
+    "mappings" : [ {
+      "ocb_id" : "GoodPartsCounter",
+      "opcua_id" : "ns=2;s=GoodPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TotalPartsCounter",
+      "opcua_id" : "ns=2;s=TotalPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TargetQuantity",
+      "opcua_id" : "ns=2;s=TargetQuantity",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "PackagingUnitQuantity",
+      "opcua_id" : "ns=2;s=PackagingUnitQuantity",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "CycleTime",
+      "opcua_id" : "ns=2;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TMrobot_Operation",
+      "opcua_id" : "ns=3;s=OperationMode",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TMrobot_Gripper",
+      "opcua_id" : "ns=3;s=GripperHold",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TMrobot_CycleTime",
+      "opcua_id" : "ns=3;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "Conveyor_Sensor1",
+      "opcua_id" : "ns=5;s=Sensor1",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "Conveyor_Sensor2",
+      "opcua_id" : "ns=5;s=Sensor2",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "Conveyor_CycleTime",
+      "opcua_id" : "ns=5;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "OTTO_Battery",
+      "opcua_id" : "ns=4;s=Battery",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "OTTO_Serial",
+      "opcua_id" : "ns=4;s=Serial",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "OTTO_Name",
+      "opcua_id" : "ns=4;s=Name",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }
+	]
+  } 
+  ],
+  "contextSubscriptions" : [ 
+
+  ]
+}

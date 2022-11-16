@@ -1,0 +1,186 @@
+{
+  "logLevel" : "INFO",
+  "contextBroker" : {
+    "host" : "orion",
+    "port" : 1026
+  },
+  "server" : {
+    "port" : 4001,
+    "baseRoot" : "/"
+  },
+  "deviceRegistry" : {
+    "type" : "memory"
+  },
+  "mongodb" : {
+    "host" : "iotmongo",
+    "port" : "27017",
+    "db" : "iotagent",
+    "retries" : 5,
+    "retryTime" : 5
+  },
+  "types" : {
+    "2:TM Station" : {
+      "service" : "opcua_tmstation",
+      "subservice" : "/demo",
+      "active" : [ {
+        "name" : "2:GoodPartsCounter",
+        "type" : "Number"
+      }, {
+        "name" : "2:TotalPartsCounter",
+        "type" : "Number"
+      }, {
+        "name" : "2:TargetQuantity",
+        "type" : "Number"
+      }, {
+        "name" : "2:PackagingUnitQuantity",
+        "type" : "Number"
+      }, {
+        "name" : "2:CycleTime",
+        "type" : "Number"
+      }, {
+        "name" : "3:TM robot_3:Operation",
+        "type" : ""
+      }, {
+        "name" : "3:TM robot_3:Gripper",
+        "type" : ""
+      }, {
+        "name" : "3:TM robot_3:CycleTime",
+        "type" : ""
+      }, {
+        "name" : "5:Conveyor_5:Sensor1",
+        "type" : ""
+      }, {
+        "name" : "5:Conveyor_5:Sensor2",
+        "type" : ""
+      }, {
+        "name" : "5:Conveyor_5:CycleTime",
+        "type" : ""
+      }, {
+        "name" : "2:OTTO_4:Battery",
+        "type" : ""
+      }, {
+        "name" : "2:OTTO_4:Serial",
+        "type" : ""
+      }, {
+        "name" : "2:OTTO_4:Name",
+        "type" : ""
+      } ],
+      "lazy" : [ ],
+      "commands" : [ ]
+    }
+  },
+  "browseServerOptions" : null,
+  "service" : "opcua_tmstation",
+  "subservice" : "/demo",
+  "providerUrl" : "http://iotage:4001",
+  "pollingExpiration" : "200000",
+  "pollingDaemonFrequency" : "20000",
+  "deviceRegistrationDuration" : "P1M",
+  "defaultType" : null,
+  "contexts" : [ {
+    "id" : "age01_2:TM Station",
+    "type" : "2:TM Station",
+    "service" : "opcua_tmstation",
+    "subservice" : "/demo",
+    "polling" : null,
+    "mappings" : [ {
+      "ocb_id" : "2:GoodPartsCounter",
+      "opcua_id" : "ns=2;s=GoodPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:TotalPartsCounter",
+      "opcua_id" : "ns=2;s=TotalPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:TargetQuantity",
+      "opcua_id" : "ns=2;s=TargetQuantity",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:PackagingUnitQuantity",
+      "opcua_id" : "ns=2;s=PackagingUnitQuantity",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:CycleTime",
+      "opcua_id" : "ns=2;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "3:TM robot_3:Operation",
+      "opcua_id" : "ns=3;s=OperationMode",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "3:TM robot_3:Gripper",
+      "opcua_id" : "ns=3;s=GripperHold",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "3:TM robot_3:CycleTime",
+      "opcua_id" : "ns=3;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "5:Conveyor_5:Sensor1",
+      "opcua_id" : "ns=5;s=Sensor1",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "5:Conveyor_5:Sensor2",
+      "opcua_id" : "ns=5;s=Sensor2",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "5:Conveyor_5:CycleTime",
+      "opcua_id" : "ns=5;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:OTTO_4:Battery",
+      "opcua_id" : "ns=4;s=Battery",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:OTTO_4:Serial",
+      "opcua_id" : "ns=4;s=Serial",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "2:OTTO_4:Name",
+      "opcua_id" : "ns=4;s=Name",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    } ]
+  } ],
+  "contextSubscriptions" : [ {
+    "id" : "age01_2:TM Station",
+    "type" : "() BaseObjectType",
+    "mappings" : [ {
+      "ocb_id" : "2:ResetCounters",
+      "opcua_id" : "ns=2;i=100",
+      "object_id" : "ns=2;s=TMStation",
+      "inputArguments" : [ ]
+    } ]
+  }, {
+    "id" : "age01_2:TM Station",
+    "type" : "() BaseObjectType",
+    "mappings" : [ {
+      "ocb_id" : "2:Start",
+      "opcua_id" : "ns=2;i=11",
+      "object_id" : "ns=2;s=TMStation",
+      "inputArguments" : [ ]
+    } ]
+  }, {
+    "id" : "age01_2:TM Station",
+    "type" : "() BaseObjectType",
+    "mappings" : [ {
+      "ocb_id" : "2:OTTO_4:CallSDV",
+      "opcua_id" : "ns=4;i=101",
+      "object_id" : "ns=2;s=OTTO",
+      "inputArguments" : [ ]
+    } ]
+  } ]
+}
