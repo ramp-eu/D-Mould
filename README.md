@@ -49,6 +49,8 @@ The image below shows how **ROSE-AP** is integrated in the Factory and connected
 
 ## Installation
 
+Follow our  [video step-by-step tutorial](https://youtu.be/zo8Bf4FP3qM) or use installation documentation below.
+
 Supported OS for this project is Windows 10 and Linux, however our main test environment was Windows 10 so we will include only instructions for this specific OS and we recommend using it for your testing purposes.
 
 To run a project clone/download a git repository and follow instructions below.
