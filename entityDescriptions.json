@@ -1,0 +1,76 @@
+contexts" : [ {
+    "id" : "age01_TM_Station",
+    "type" : "TM_Station",
+    "service" : "opcua_tmstation",
+    "subservice" : "/demo",
+    "polling" : false,
+    "mappings" : [ {
+      "ocb_id" : "GoodPartsCounter",
+      "opcua_id" : "ns=2;s=GoodPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TotalPartsCounter",
+      "opcua_id" : "ns=2;s=TotalPartsCounter",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TargetQuantity",
+      "opcua_id" : "ns=2;s=TargetQuantity",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "PackagingUnitQuantity",
+      "opcua_id" : "ns=2;s=PackagingUnitQuantity",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "CycleTime",
+      "opcua_id" : "ns=2;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TMrobot_Operation",
+      "opcua_id" : "ns=3;s=OperationMode",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TMrobot_Gripper",
+      "opcua_id" : "ns=3;s=GripperHold",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "TMrobot_CycleTime",
+      "opcua_id" : "ns=3;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "Conveyor_Sensor1",
+      "opcua_id" : "ns=5;s=Sensor1",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "Conveyor_Sensor2",
+      "opcua_id" : "ns=5;s=Sensor2",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "Conveyor_CycleTime",
+      "opcua_id" : "ns=5;s=CycleTime",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "OTTO_Battery",
+      "opcua_id" : "ns=4;s=Battery",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "OTTO_Serial",
+      "opcua_id" : "ns=4;s=Serial",
+      "object_id" : null,
+      "inputArguments" : [ ]
+    }, {
+      "ocb_id" : "OTTO_Name",
+      "opcua_id" : "ns=4;s=Name",
+      "object_id" : null,
+      "inputArguments" : [ ]
