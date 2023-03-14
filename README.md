@@ -135,6 +135,46 @@ Data is also visualised in our RAMP dashboard
   <p align="center">RAMP dasboard</p>
 </div>
 
+## Appendix
+
+### KPI calculation example
+
+<div>
+  <p align="center">
+    <img src="KPI calculation example.png">
+  </p>
+  <p align="center">KPI example</p>
+</div>
+
+ [Click to sample csv data example](https://github.com/proaimslovenia/D-Mould/blob/main/data.csv)
+
+
+
+### Entity descriptions
+
+The OPC-UA nodes are translated to FIWARE Orion Context Broker entities via mapping configuration file. The mapping is done in the following way as shown in the json file on the link below.
+
+ [Click to view json example](https://github.com/proaimslovenia/D-Mould/blob/main/entityDescriptions.json)
+
+ This is also presenting the entities available in the context broker.
+
+ #### Entity description
+
+    • Cycle time – numeric variable, presenting the complete cycle time of a workstation
+    • Good parts counter – numeric variable, presenting the counter of good partis since last counter reset
+    • Total parts counter – numeric variable, presenting the total count of parts since last reset of the counters. It is actually presenting the sum of good and bad parts
+    • Target quantity – numeric variable, presenting the goal count of good parts to complete the work order
+    • Packaging unit quantity – numeric variable, presenting the amount of parts, which fits in transportation box. This variable is used for automatic call of the OTTO SDV.
+    • Sensor 1 – Boolean variable, presenting the status of the sensor at the drop zone of the conveyor. This data can be used to determine bottlenecks and unusual behavior
+    • Sensor 2 – Boolean variable, presenting the status of the sensor at the pick zone of the conveyor. This data can be used to determine bottlenecks and unusual behavior
+    • Operation mode – numeric variable, mode of the robot. It can be used to detect errors and interference of the operators
+
+<div>
+  <p align="center">
+    <img src="opcuaDiscoveryExample.png">
+  </p>
+  <p align="center">OPC-UA discovery example</p>
+</div>
 
 
 ## License
