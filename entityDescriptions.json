@@ -1,4 +1,4 @@
-contexts" : [ {
+"contexts" : [ {
     "id" : "age01_TM_Station",
     "type" : "TM_Station",
     "service" : "opcua_tmstation",
@@ -74,5 +74,5 @@ contexts" : [ {
       "opcua_id" : "ns=4;s=Name",
       "object_id" : null,
       "inputArguments" : [ ]
-            }
+    }
 	]
